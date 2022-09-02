@@ -1,4 +1,4 @@
-# gd-otp
+# Godot Engine GDScript OTP
 Godot Engine plugin to generate [RFC4226](https://www.rfc-editor.org/rfc/rfc4226) and [RFC6238](https://www.rfc-editor.org/rfc/rfc6238) compliant One Time Passwords in GDScript. 
 
 HOTP (RFC4226) and TOTP (RFC6238) are mostly used for [Multi Factor Authentication (MFA)](https://en.wikipedia.org/wiki/Multi-factor_authentication) and Two Factor Authentication (2FA).
@@ -28,7 +28,7 @@ func _ready() -> void:
 ```
 
 ### Running Tests
-*Is this library really RFC compliant?*
+*Is this library really RFC compliant?*  
 You can run compliancy tests yourself!
 ```gdscript
 func _ready() -> void:
