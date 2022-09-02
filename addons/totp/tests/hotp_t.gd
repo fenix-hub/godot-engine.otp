@@ -1,7 +1,7 @@
 extends Reference
 class_name HOTPTest
 
-var format_str: String = "%-9s %-44s %-12s %-18s %s"
+var format_str: String = "%-9s %-44s %-14s %-14s %s"
 
 var test_secret: String = "12345678901234567890"
 
