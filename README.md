@@ -10,7 +10,7 @@ This plugin also contains a Base32 Encoder/Decoder, which **may** be required to
 ### HOTP example
 ```gdscript
 func _ready() -> void:
-	var secret: PoolByteArray == "secret".to_ascii()
+	var secret: PoolByteArray = "secret".to_ascii()
 	var moving_factor: int = randi() % 1000
 	var hotp_generator: HOTPGenerator = HOTPGenerator.new()
 	var hotp: String = hotp_generator.generate_hotp(secret, moving_factor)
@@ -20,7 +20,7 @@ func _ready() -> void:
 ### TOTP example
 ```gdscript
 func _ready() -> void:
-	var secret: PoolByteArray == "secret".to_ascii()
+	var secret: PoolByteArray = "secret".to_ascii()
 	var totp_generator: TOTPGenerator = TOTPGenerator.new()
 	var totp: String = totp_generator.generate_totp(secret)
 	print(totp_generator.secs_remaining) # will print something between 0 and 30
