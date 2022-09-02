@@ -23,6 +23,6 @@ func _ready() -> void:
 	var secret: PoolByteArray == "secret".to_ascii()
 	var totp_generator: TOTPGenerator = TOTPGenerator.new()
 	var totp: String = totp_generator.generate_totp(secret)
-	print(totp_generator.secs_remaining)	# will print something between 0 and 30
-	print(totp) 							# will print something similar to `183920`
+	print(totp_generator.secs_remaining) # will print something between 0 and 30
+	print(totp)	# will print something similar to `183920`
 ```
