@@ -1,7 +1,7 @@
 # gd-otp
-Godot Engine plugin to generate ![RFC4226](https://www.rfc-editor.org/rfc/rfc4226) and ![RFC6238](https://www.rfc-editor.org/rfc/rfc6238) compliant One Time Passwords in GDScript. 
+Godot Engine plugin to generate [RFC4226](https://www.rfc-editor.org/rfc/rfc4226) and [RFC6238](https://www.rfc-editor.org/rfc/rfc6238) compliant One Time Passwords in GDScript. 
 
-HOTP (RFC4226) and TOTP (RFC6238) are mostly used for ![Multi Factor Authentication (MFA)](https://en.wikipedia.org/wiki/Multi-factor_authentication) and Two Factor Authentication (2FA).
+HOTP (RFC4226) and TOTP (RFC6238) are mostly used for [Multi Factor Authentication (MFA)](https://en.wikipedia.org/wiki/Multi-factor_authentication) and Two Factor Authentication (2FA).
 Generated TOTP are compatible with Microsoft Authenticator, Google Authenticator, and most used 2fa apps.
 
 This plugin also contains a Base32 Encoder/Decoder, which **may** be required to decode Base32 shared secrets provided by most platforms (Github, Google, Microsoft, etc...), used to generate a Time-based One Time Password (TOTP).
