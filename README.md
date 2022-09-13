@@ -1,4 +1,7 @@
 # Godot Engine GDScript OTP
+
+<p align="center">👉 <b><a href="https://github.com/fenix-hub/godot-engine.otp/tree/3.x">3.x</a></b> - <a href="https://github.com/fenix-hub/godot-engine.otp/tree/4.x">4.x</a></p>
+
 Godot Engine plugin to generate [RFC4226](https://www.rfc-editor.org/rfc/rfc4226) and [RFC6238](https://www.rfc-editor.org/rfc/rfc6238) compliant One Time Passwords in GDScript. 
 
 HOTP (RFC4226) and TOTP (RFC6238) are mostly used for [Multi Factor Authentication (MFA)](https://en.wikipedia.org/wiki/Multi-factor_authentication) and Two Factor Authentication (2FA).
