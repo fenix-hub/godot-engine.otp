@@ -1,4 +1,7 @@
 # Godot Engine GDScript OTP
+
+<p align="center">[3.x](https://github.com/fenix-hub/godot-engine.otp/tree/3.x) - **[4.x](https://github.com/fenix-hub/godot-engine.otp/tree/4.x)**</p>
+
 Godot Engine plugin to generate [RFC4226](https://www.rfc-editor.org/rfc/rfc4226) and [RFC6238](https://www.rfc-editor.org/rfc/rfc6238) compliant One Time Passwords in GDScript. 
 
 HOTP (RFC4226) and TOTP (RFC6238) are mostly used for [Multi Factor Authentication (MFA)](https://en.wikipedia.org/wiki/Multi-factor_authentication) and Two Factor Authentication (2FA).
@@ -10,7 +13,7 @@ This plugin also contains a Base32 Encoder/Decoder, which **may** be required to
 ### HOTP example
 ```gdscript
 func _ready() -> void:
-	var secret: PoolByteArray = "secret".to_ascii()
+	var secret: PackedByteArray = "secret".to_ascii_buffer()
 	var moving_factor: int = randi() % 1000
 	var hotp_generator: HOTPGenerator = HOTPGenerator.new()
 	var hotp: String = hotp_generator.generate_hotp(secret, moving_factor)
@@ -20,7 +23,7 @@ func _ready() -> void:
 ### TOTP example
 ```gdscript
 func _ready() -> void:
-	var secret: PoolByteArray = "secret".to_ascii()
+	var secret: PackedByteArray = "secret".to_ascii_buffer()
 	var totp_generator: TOTPGenerator = TOTPGenerator.new()
 	var totp: String = totp_generator.generate_totp(secret)
 	print(totp_generator.secs_remaining) # will print something between 30 and 0
@@ -63,7 +66,7 @@ Here some example usage of the Base32 class
 ```gdscript
 func _ready() -> void:
 	var str: String = "base32encoding"
-	var base32_byte: PoolByteArray = Base32.encode(str.to_ascii())
+	var base32_byte: PackedByteArray = Base32.encode(str.to_ascii_buffer())
 	print(base32_byte.get_string_from_ascii()) 
 	# will print 'MJQXGZJTGJSW4Y3PMRUW4ZY='
 	var back_val: String = Base32.decode(base32_byte.get_string_from_ascii())
